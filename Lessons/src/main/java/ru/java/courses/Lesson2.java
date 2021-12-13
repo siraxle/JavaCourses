@@ -1,5 +1,7 @@
 package ru.java.courses;
 
+import java.util.Locale;
+
 class Lesson2 {
 
     /**
@@ -12,7 +14,8 @@ class Lesson2 {
      * хвост отбрасываем без откругления
      */
     static int formula(int x) {
-        return 0;
+        int y = (int) Math.sqrt(13 * x + 13 / x);
+        return y;
     }
 
     /**
@@ -29,7 +32,13 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        return null;
+        String [] arr = fullName.split(" ");
+        String shortName = "";
+        shortName += arr[0].charAt(0) + ".";
+        shortName += arr[1].charAt(0) + ".";
+        shortName += arr[2].charAt(0) + ".";
+
+        return shortName.toUpperCase();
     }
 
 }
