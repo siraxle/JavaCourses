@@ -34,7 +34,6 @@ class Lesson3_OperatorsTest {
         assertFalse(Lesson3_Operators.task2(31), "31 → false");
         assertFalse(Lesson3_Operators.task2(-1000), "-1000 → false");
         assertFalse(Lesson3_Operators.task2(-1001), "-1001 → false");
-
         assertTrue(Lesson3_Operators.task2(-350), "-350 → true");
         assertTrue(Lesson3_Operators.task2(1000), "1000 → true");
         assertTrue(Lesson3_Operators.task2(1001), "1001 → true");
