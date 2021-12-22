@@ -19,20 +19,15 @@ public class Lesson4_FlowControl {
    */
   public static String task1(String[] strings) {
     String maxString = "";
-    if (strings.length == 0) {
-      return maxString;
-    }
-
-    for (int i = 0; i < strings.length; i++) {
-      for (int j = 0; j < strings.length; j++) {
-        if (strings[i].length() > strings[j].length()) {
-          maxString = strings[i];
-          return maxString;
+    if (strings.length > 1) {
+      for (int j = 0; j < strings.length - 1; j++) {
+        if (strings[j].length() >= strings[j + 1].length()) {
+          maxString = strings[j];
         }
       }
+    } else if (strings.length == 1) {
+      maxString = strings[0];
     }
-
-    maxString = strings[0];
 
     return maxString;
   }
@@ -56,6 +51,29 @@ public class Lesson4_FlowControl {
    * @return целочисленный результат выполнения операции
    */
   public static int task2(int i, int k, char operation) {
-    return 0;
+    int res = 0;
+    switch (operation) {
+      case '+':
+        res = i + k;
+        break;
+      case '-':
+        res = i - k;
+        break;
+      case '*':
+        res = i * k;
+        break;
+      case '/':
+        if (k > 0) {
+          res = i / k;
+        }
+        break;
+      case '%':
+        res = i % k;
+        break;
+      default:
+        break;
+    }
+
+    return res;
   }
 }
