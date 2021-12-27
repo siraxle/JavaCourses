@@ -73,7 +73,6 @@ public class Lesson4_FlowControl {
       default:
         break;
     }
-
     return res;
   }
 }
