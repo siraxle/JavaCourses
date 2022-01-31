@@ -19,15 +19,17 @@ public class Lesson10_CollectionsLists {
    * Удалять элементы из итерируемого списка нельзя - выпадет исключение
    */
   public static List<String> task1(List<Integer> source) {
-    List<Integer> integers = new ArrayList<>();
     List<String> strings = new ArrayList<>();
 
     Collections.sort(source);
 
-    for (Integer i : source) {
-      if (!integers.contains(i)) {
-        integers.add(i);
-        strings.add(String.valueOf(i));
+    for (int i = 0; i < source.size(); i++) {
+      if (i == source.size() - 1) {
+        strings.add(String.valueOf(source.get(i)));
+        break;
+      }
+      if (!source.get(i).equals(source.get(i + 1))) {
+        strings.add(String.valueOf(source.get(i)));
       }
     }
 
