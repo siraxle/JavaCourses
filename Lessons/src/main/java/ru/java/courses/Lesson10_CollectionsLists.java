@@ -20,19 +20,17 @@ public class Lesson10_CollectionsLists {
    */
   public static List<String> task1(List<Integer> source) {
     List<Integer> integers = new ArrayList<>();
+    List<String> strings = new ArrayList<>();
+
+    Collections.sort(source);
 
     for (Integer i : source) {
       if (!integers.contains(i)) {
         integers.add(i);
+        strings.add(String.valueOf(i));
       }
     }
 
-    Collections.sort(integers);
-
-    List<String> strings = new ArrayList<>();
-    for (Integer i : integers) {
-      strings.add(String.valueOf(i));
-    }
     return strings;
   }
 
@@ -47,16 +45,17 @@ public class Lesson10_CollectionsLists {
    */
   public static List<Integer> task2(Integer... array) {
     List<Integer> integers = new ArrayList<>(Arrays.asList(array));
+    ArrayList<Integer> res = new ArrayList<>();
+
     for (int i = 0; i < integers.size(); i++) {
       if (integers.get(i) % 2 == 0) {
         integers.set(i, integers.get(i) + 1);
       }
+      if (i >= 3 && i < 8 && i < array.length) {
+        res.add(integers.get(i));
+      }
     }
 
-    ArrayList<Integer> res = new ArrayList<>();
-    for (int i = 3; i < 8 && i < array.length; i++) {
-      res.add(integers.get(i));
-    }
     return res;
   }
 }
