@@ -10,9 +10,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.java.courses.sport.Athlete;
 import ru.java.courses.sport.Coach;
-import ru.java.courses.sport.team.football.FootballPlayer;
-import ru.java.courses.sport.team.football.FootballTeam;
 import ru.java.courses.sport.team.football.PlayerRole;
+import ru.java.courses.sport.team.football.FootballTeam;
+import ru.java.courses.sport.team.football.FootballPlayer;
 
 public class Lesson6to9_OOPTest {
 

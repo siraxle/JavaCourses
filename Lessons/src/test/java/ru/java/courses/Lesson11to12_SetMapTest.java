@@ -19,7 +19,17 @@ public class Lesson11to12_SetMapTest {
      */
     @Test
     public void task1() {
-        List<User> users = Arrays.asList(new User("Ivan", 15), new User("Masha", 17), new User("Kolya", 23), new User("Denis", 7), new User("Vova", 45), new User("Marina", 15), new User("Kolya", 15), new User("Vova", 25), new User("Vlad", 26), new User("Ivan", 17));
+        List<User> users = Arrays.asList(
+            new User("Ivan", 15),
+            new User("Masha", 17),
+            new User("Kolya", 23),
+            new User("Denis", 7),
+            new User("Vova", 45),
+            new User("Marina", 15),
+            new User("Kolya", 15),
+            new User("Vova", 25),
+            new User("Vlad", 26),
+            new User("Ivan", 17));
 
         User result = Lesson11to12_SetMap.task1(users);
         Assertions.assertEquals("Vova", result.getName(), "В конце должен быть Vova, 45 лет");
@@ -35,7 +45,17 @@ public class Lesson11to12_SetMapTest {
      */
     @Test
     public void task2() {
-        List<User> users = Arrays.asList(new User("1234"), new User("36736"), new User("1244"), new User("234324"), new User("234"), new User("234"), new User("234346"), new User("1234"), new User("23523"), new User("2342342"));
+        List<User> users = Arrays.asList(
+            new User("1234"),
+            new User("36736"),
+            new User("1244"),
+            new User("234324"),
+            new User("234"),
+            new User("234"),
+            new User("234346"),
+            new User("1234"),
+            new User("23523"),
+            new User("2342342"));
 
         int result = Lesson11to12_SetMap.task2(users);
         Assertions.assertEquals(8 ,result, "Должно быть 8 записей");
@@ -61,8 +81,8 @@ public class Lesson11to12_SetMapTest {
         Map<Integer, List<String>> result = Lesson11to12_SetMap.task3(books);
 
         Assertions.assertEquals("Гуси-лебеди", result.get(2).get(1), "Гуси-лебеди д.б. первой книгой на второй полке");
-        Assertions.assertEquals("Код да Винчи", result.get(3).get(2), "Гуси-лебеди д.б. второй книгой на третьей полке");
-        Assertions.assertEquals("Аэлита", result.get(1).get(1), "Гуси-лебеди д.б. первой книгой на первой полке");
+        Assertions.assertEquals("Код да Винчи", result.get(3).get(2), "Код да Винчи д.б. второй книгой на третьей полке");
+        Assertions.assertEquals("Аэлита", result.get(1).get(1), "Аэлита д.б. первой книгой на первой полке");
     }
 
 
